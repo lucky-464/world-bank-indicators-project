@@ -13,3 +13,5 @@ __pycache__/
 
 # Raw data (too large for git)
 WDIEXCEL.xlsx
+WDI.csv
+WDIEXCEL.xlsx
