@@ -67,6 +67,51 @@ card to `Line`, sorted legend alphabetically. Renamed sheet to
 `docs/methodology/economic_growth_tableau_design.md` (write at end of build).
 
 ---
+### Day 2 — Consumption composition (stacked area, 6 countries)
+
+**Built:** New worksheet `Consumption composition`. Created two calculated
+fields (`Govt Consumption`, `Household Consumption`) using
+`IF [Indicator Code] = "..." THEN [Value] END`. Plotted with
+`Years` → Columns, `Measure Values` → Rows, `Measure Names` → Color,
+and `Country Name` → Columns (facets). Filtered to 6 countries + 2
+indicators. Changed Marks to Area. Applied independent axis range,
+then locked to shared 0–100.
+
+**Concepts learned:**
+- Calculated fields (IF/THEN/END pattern for splitting long-format measures)
+- `Measure Names` / `Measure Values` in practice
+- Faceting (small multiples) via `Country Name` → Columns
+- Stacked area chart construction
+- `Edit Axis` — independent vs shared axis ranges
+
+**Exam relevance:**
+- Domain 2: calculated fields, Measure Names/Values, chart building
+- Domain 4: when stacked areas are appropriate (part-to-whole over time)
+
+**Traps logged:**
+- Without `Country Name` on the view, Tableau sums all 6 countries into
+  one — the Y-axis showed 0–450% before faceting. Same root cause as the
+  Day 1 `SUM(Value)` trap: any Dimension filter only restricts rows, it
+  does not split aggregation.
+- Independent axis ranges can *mislead* side-by-side comparisons. Use
+  shared axes unless the scale difference is the point.
+
+**Insight from chart:** China's household consumption fell from ~60% to
+~35% of GDP between 1990 and 2010, mirroring the savings-glut narrative.
+India and Bangladesh show household dominance with minimal government
+consumption. US and Japan show the widest government-consumption bands.
+
+### Day 2 — chart reading (for design note later)
+Shared-axis comparison reveals:
+- China: household consumption share collapsed from ~75% (1980) to
+  ~35% (2010) — the savings-glut narrative.
+- India, Bangladesh: household-dominant composition (~70–80%),
+  government thin (~10%) — classic low-tax-base development pattern.
+- US, Japan: widest government-consumption band (~15–20% of GDP).
+- Viet Nam: sharp household dip ~2020 — COVID shock visible in the data.
+
+This is the visual answer to Chapter 1 Section 3, Q6 (the "government
+vs household consumption" ambiguity).
 
 ## Concept Index
 
@@ -116,6 +161,14 @@ and household consumption), you cannot plot them separately without first
 creating two calculated fields that filter `Value` by `Indicator Code`.
 - `[Govt Consumption] = IF [Indicator Code] = "NE.CON.GOVT.ZS" THEN [Value] END`
 - `[Household Consumption] = IF [Indicator Code] = "NE.CON.PRVT.ZS" THEN [Value] END`
+### Anatomy of `IF ... THEN ... END`
+- `IF [condition] THEN [return] END` — returns NULL if condition is false.
+- `[Indicator Code]` = column reference. Always square brackets.
+- `= "NE.CON.GOVT.ZS"` — string comparison. Use `=` (not `==`). Double quotes for text.
+- `THEN [Value]` — what to return when the row matches.
+- `END` — required. Without it, Tableau throws a syntax error.
+- **When to use this pattern:** whenever a measure lives in a long-format column and you need one measure per category.
+- **Exam relevance:** Domain 2. Basic calculated fields are heavily tested; this is the simplest form.
 Then use `Measure Names` on Color and `Measure Values` on Rows.
 **Exam relevance:** Domain 2. This "long → split" pattern appears in scenario questions.
 ### Git — what `git add` actually does
