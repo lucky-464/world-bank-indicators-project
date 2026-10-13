@@ -49,9 +49,12 @@ Urban population,SP.URB.GROW,Urban population growth (annual %),drop,Urban popul
 Urban population,SP.URB.TOTL,Urban population,drop,Urban population level. Retained urban share of total.
 Urban population,SP.URB.TOTL.IN.ZS,Urban population (% of total population),keep,Urban population share. Structural control.
 Access to electricity,EG.ELC.ACCS.RU.ZS,"Access to electricity, rural (% of rural population)",drop,Rural-only access. Retained total-population access.
-Access to electricity,EG.ELC.ACCS.UR.ZS,"Access to electricity, urban (% of urban population)",drop,Urban-only access. Retained total-population access.
 Access to electricity,EG.ELC.ACCS.ZS,Access to electricity (% of population),keep,"Electricity access, total population. Infrastructure control."
 Government effectiveness,GOV_WGI_GE_EST,Government Effectiveness - Governance estimate (approx. -2.5 to +2.5),keep,"Government effectiveness, estimate scale. Institutional control."
 Government effectiveness,GOV_WGI_GE_SC,Government Effectiveness - Governance score (0-100),drop,Rescaled score (0-100). Retained estimate scale for continuity with WGI.
 Regulatory quality,GOV_WGI_RQ_EST,Regulatory Quality - Governance estimate (approx. -2.5 to +2.5),keep,"Regulatory quality, estimate scale. Institutional control."
 Regulatory quality,GOV_WGI_RQ_SC,Regulatory Quality - Governance score (0-100),drop,Rescaled score (0-100). Retained estimate scale for continuity with WGI.
+Urban population,SP.RUR.TOTL.ZS,Rural population (% of total population),drop,Complement of urban share. Redundant with SP.URB.TOTL.IN.ZS.
+Urban population,SP.RUR.TOTL,Rural population,drop,Level count. Retained urban share of total.
+Urban population,EN.URB.LCTY,Population in largest city,drop,Largest-city concentration. Not the urban share of total population.
+Urban population,SP.RUR.TOTL.ZG,Rural population growth (annual %),drop,Growth rate. Retained urban share of total.

@@ -4,7 +4,7 @@ Dep. Variable:      SL.GDP.PCAP.EM.KD   R-squared:                        0.8958
 Estimator:                   PanelOLS   R-squared (Between):              0.9210
 No. Observations:                 761   R-squared (Within):               0.8849
 Date:                Tue, Oct 13 2026   R-squared (Overall):              0.9354
-Time:                        11:46:22   Log-likelihood                   -6956.2
+Time:                        16:32:33   Log-likelihood                   -6956.2
 Cov. Estimator:             Clustered                                           
                                         F-statistic:                      703.84
 Entities:                          86   P-value                           0.0000

@@ -178,6 +178,8 @@ Poolability test rejects the pooled model in every specification. Country and ye
 | `reconciliation.csv` | Python-R-Stata coefficient comparison |
 | `countries_real.json` | 217 real countries (aggregates excluded) |
 | `indicators_catalog.csv` | Full WDI indicator catalog |
+| `bias_distribution.png` | Monte Carlo figure: pooled OLS vs FE |
+| `shortlist_codes.txt` | The 20 shortlisted indicator codes |
 
 **To reproduce:**
 
