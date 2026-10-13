@@ -30,9 +30,11 @@ The CDT lists "Inclusion and Bridging Digital Divide" and "Effects of digitizati
 
 **Indicators:** 20 shortlisted from 1,499 WDI series. Selection procedure:
 
-- Keyword matching over indicator names and definitions, 56 candidates surfaced
-- Filtered to codes that matched the target construct, unit, and population breakdown
-- 20 kept, 36 dropped with documented reasons
+- Keyword matching over indicator names and definitions, 59 unique candidates surfaced
+- Filtered to codes that matched the target construct, unit, and population    reakdown
+- 20 kept, 39 dropped with documented reasons
+- Method: keyword matching over indicator names and definitions. TF-IDF not used — the shortlist was targeted at specific constructs, not exploratory.
+
 - Full log: [`shortlist_decisions.csv`](shortlist_decisions.csv)
 
 **Coverage audit:**
