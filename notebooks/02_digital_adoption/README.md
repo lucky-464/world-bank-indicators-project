@@ -31,7 +31,7 @@ The CDT lists "Inclusion and Bridging Digital Divide" and "Effects of digitizati
 **Indicators:** 20 shortlisted from 1,499 WDI series. Selection procedure:
 
 - Keyword matching over indicator names and definitions, 59 unique candidates surfaced
-- Filtered to codes that matched the target construct, unit, and population    reakdown
+- Filtered to codes that matched the target construct, unit, and population breakdown
 - 20 kept, 39 dropped with documented reasons
 - Method: keyword matching over indicator names and definitions. TF-IDF not used — the shortlist was targeted at specific constructs, not exploratory.
 
@@ -98,7 +98,7 @@ Same specification estimated in Python (`linearmodels.PanelOLS`), R (`fixest::fe
 | Female LFP FE | −0.0175 | −0.0175 | −0.0175 |
 | Interaction (`IT_lag1_x_gap`) | −0.0021 | −0.0021 | −0.0021 |
 
-Coefficients match to three decimals. Full table: [`task3_reconciliation.csv`](task3_reconciliation.csv).
+Coefficients match to three decimals. Full table: [`reconciliation.csv`](reconciliation.csv).
 
 ### Standard errors
 
@@ -168,23 +168,23 @@ Poolability test rejects the pooled model in every specification. Country and ye
 | File | Purpose |
 |---|---|
 | `DigitalAdoption.ipynb` | Data pull, coverage audit, NLP shortlist, panel build, Python models |
-| `task4_simulation.ipynb` | Monte Carlo showing pooled OLS bias |
-| `task3_models.R` | R replication (fixest) |
-| `task3_models.do` | Stata replication (reghdfe) |
+| `Simulation.ipynb` | Monte Carlo showing pooled OLS is biased upward by ~0.49 while FE recovers the true β = 0.5 with bias ~0.00001. |
+| `Models.R` | R replication (fixest) |
+| `Models.do` | Stata replication (reghdfe) |
 | `panel_task2.csv` | Clean analysis panel — 86 countries, 761 observations |
 | `panel_long.csv` | Raw long-format panel (92,105 observations) |
 | `coverage_by_indicator.csv` | Coverage audit table |
-| `shortlist_decisions.csv` | 56 shortlist candidates, keep/drop with reasons |
-| `task3_reconciliation.csv` | Python-R-Stata coefficient comparison |
+| `shortlist_decisions.csv` | 59 shortlist candidates, keep/drop with reasons |
+| `reconciliation.csv` | Python-R-Stata coefficient comparison |
 | `countries_real.json` | 217 real countries (aggregates excluded) |
 | `indicators_catalog.csv` | Full WDI indicator catalog |
 
 **To reproduce:**
 
 1. Run `DigitalAdoption.ipynb` top to bottom. Pulls all data via API. No manual downloads.
-2. Run `task3_models.R` in RStudio.
-3. Run `task3_models.do` in Stata.
-4. Run `task4_simulation.ipynb`.
+2. Run `models.R` in RStudio.
+3. Run `models.do` in Stata.
+4. Run `Simulation.ipynb`.
 
 All outputs are regenerated.
 
