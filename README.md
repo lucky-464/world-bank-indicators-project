@@ -66,8 +66,7 @@ git clone <repo>
 cd world-bank-indicators-project
 pip install pandas openpyxl matplotlib
 # Download WDIEXCEL.xlsx from the World Bank and place at repo root
-
-
+```
 ## Chapter 2 — Digital Adoption, Productivity, and Female Labour-Force Participation
 
 **Question:** Does digital adoption raise labour productivity and female labour-force participation across countries? Does the male-female internet gender gap weaken that effect?
