@@ -1,0 +1,57 @@
+keyword,code,name,decision,reason
+Individuals using the Internet,IT.NET.USER.FE.ZS,"Individuals using the Internet, female (% of female population)",keep,Female internet penetration. Required to construct the gender gap.
+Individuals using the Internet,IT.NET.USER.MA.ZS,"Individuals using the Internet, male (% of male population)",keep,Male internet penetration. Required to construct the gender gap.
+Individuals using the Internet,IT.NET.USER.ZS,Individuals using the Internet (% of population),keep,Total internet penetration. Primary digital adoption measure.
+Fixed broadband subscriptions,IT.NET.BBND,Fixed broadband subscriptions,drop,Level count. Retained rate form for cross-country comparability.
+Fixed broadband subscriptions,IT.NET.BBND.P2,Fixed broadband subscriptions (per 100 people),keep,Fixed broadband per 100. Rate form for cross-country comparability.
+Mobile cellular subscriptions,IT.CEL.SETS,Mobile cellular subscriptions,drop,Level count. Retained rate form for cross-country comparability.
+Mobile cellular subscriptions,IT.CEL.SETS.P2,Mobile cellular subscriptions (per 100 people),keep,Mobile subscriptions per 100. Rate form for cross-country comparability.
+Secure Internet servers,IT.NET.SECR,Secure Internet servers,drop,Level count. Retained rate form for cross-country comparability.
+Secure Internet servers,IT.NET.SECR.P6,Secure Internet servers (per 1 million people),keep,Secure servers per 1m. Rate form for cross-country comparability.
+ICT service exports,BX.GSR.CCIS.CD,"ICT service exports (BoP, current US$)",drop,Nominal USD value. Retained share-of-exports form for comparability.
+ICT service exports,BX.GSR.CCIS.ZS,"ICT service exports (% of service exports, BoP)",keep,"ICT service exports as share of service exports. Scale-free, comparable."
+Investment in ICT with private participation,IE.PPI.ICTI.CD,Investment in ICT with private participation (current US$),keep,ICT investment with private participation. Only available variant.
+Account ownership at a financial institution,FX.OWN.TOTL.40.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, poorest 40% (% of population ages 15+)",drop,Income-quintile split. Scope restricted to total and female aggregates.
+Account ownership at a financial institution,FX.OWN.TOTL.60.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, richest 60% (% of population ages 15+)",drop,Income-quintile split. Scope restricted to total and female aggregates.
+Account ownership at a financial institution,FX.OWN.TOTL.FE.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, female (% of population ages 15+)",keep,"Account ownership, female 15+. Required for inclusion analysis."
+Account ownership at a financial institution,FX.OWN.TOTL.MA.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, male (% of population ages 15+)",drop,Male-only split. Inclusion analysis uses total and female aggregates.
+Account ownership at a financial institution,FX.OWN.TOTL.OL.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, older adults (% of population ages 25+)",drop,Age split (25+). Out of scope.
+Account ownership at a financial institution,FX.OWN.TOTL.PL.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, primary education or less (% of population ages 15+)",drop,Education split (primary or less). Out of scope.
+Account ownership at a financial institution,FX.OWN.TOTL.SO.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, secondary education or more (% of population ages 15+)",drop,Education split (secondary or more). Out of scope.
+Account ownership at a financial institution,FX.OWN.TOTL.YG.ZS,"Account ownership at a financial institution or with a mobile-money-service provider, young adults (% of population ages 15-24)",drop,Age split (15-24). Out of scope.
+Account ownership at a financial institution,FX.OWN.TOTL.ZS,Account ownership at a financial institution or with a mobile-money-service provider (% of population ages 15+),keep,"Account ownership, population 15+. Total aggregate."
+GDP per person employed,SL.GDP.PCAP.EM.KD,GDP per person employed (constant 2021 PPP $),keep,"GDP per person employed, constant 2021 PPP. Primary productivity outcome."
+"Labor force participation rate, female",SL.TLF.ACTI.FE.ZS,"Labor force participation rate, female (% of female population ages 15-64) (modeled ILO estimate)",drop,Age band 15-64. Retained 15+ headline series for consistency.
+"Labor force participation rate, female",SL.TLF.CACT.FE.NE.ZS,"Labor force participation rate, female (% of female population ages 15+) (national estimate)",drop,National estimate. Retained ILO modelled series for cross-country comparability.
+"Labor force participation rate, female",SL.TLF.CACT.FE.ZS,"Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate)",keep,"Female LFP, ages 15+, ILO modelled. Primary participation outcome."
+Ratio of female to male labor force participation,SL.TLF.CACT.FM.NE.ZS,Ratio of female to male labor force participation rate (%) (national estimate),drop,National estimate. Retained ILO modelled series for cross-country comparability.
+Ratio of female to male labor force participation,SL.TLF.CACT.FM.ZS,Ratio of female to male labor force participation rate (%) (modeled ILO estimate),keep,"Female-to-male LFP ratio, ILO modelled. Secondary participation outcome."
+"GDP per capita, PPP",NY.GDP.PCAP.PP.CD,"GDP per capita, PPP (current international $)",drop,Current international prices. Retained constant-price series for real comparisons.
+"GDP per capita, PPP",NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant 2021 international $)",keep,"GDP per capita, constant PPP. Income control."
+"School enrollment, tertiary",SE.ENR.TERT.FM.ZS,"School enrollment, tertiary (gross), gender parity index (GPI)",drop,Gender parity index. Retained gross enrolment rate.
+"School enrollment, tertiary",SE.TER.ENRR,"School enrollment, tertiary (% gross)",keep,Tertiary gross enrolment. Human capital control.
+"School enrollment, tertiary",SE.TER.ENRR.FE,"School enrollment, tertiary, female (% gross)",drop,Female-only enrolment. Retained total enrolment for control specification.
+"School enrollment, tertiary",SE.TER.ENRR.MA,"School enrollment, tertiary, male (% gross)",drop,Male-only enrolment. Retained total enrolment for control specification.
+Trade (% of GDP),NE.TRD.GNFS.ZS,Trade (% of GDP),keep,Trade as share of GDP. Openness control.
+Trade (% of GDP),TG.VAL.TOTL.GD.ZS,Merchandise trade (% of GDP),drop,Merchandise trade only. Shortlisted measure is total trade share.
+Urban population,EG.CFT.ACCS.UR.ZS,"Access to clean fuels and technologies for cooking, urban (% of urban population)",drop,"Cooking-fuel access, urban. Not an urbanisation measure."
+Urban population,EG.ELC.ACCS.UR.ZS,"Access to electricity, urban (% of urban population)",drop,Urban-only access. Retained total-population access.
+Urban population,EN.POP.EL5M.UR.ZS,Urban population living in areas where elevation is below 5 meters (% of total population),drop,Low-elevation population. Not an urbanisation measure.
+Urban population,EN.POP.SLUM.UR.ZS,Population living in slums (% of urban population),drop,Slum population. Not an urbanisation measure.
+Urban population,EN.URB.LCTY.UR.ZS,Population in the largest city (% of urban population),drop,Largest-city concentration. Not the urban share of total population.
+Urban population,SH.H2O.BASW.UR.ZS,"People using at least basic drinking water services, urban (% of urban population)",drop,Basic drinking water access. Not an urbanisation measure.
+Urban population,SH.H2O.SMDW.UR.ZS,"People using safely managed drinking water services, urban (% of urban population)",drop,Safely managed drinking water. Not an urbanisation measure.
+Urban population,SH.STA.BASS.UR.ZS,"People using at least basic sanitation services, urban (% of urban population)",drop,Basic sanitation access. Not an urbanisation measure.
+Urban population,SH.STA.HYGN.UR.ZS,"People with basic handwashing facilities including soap and water, urban (% of urban population)",drop,Handwashing facility access. Not an urbanisation measure.
+Urban population,SH.STA.ODFC.UR.ZS,"People practicing open defecation, urban (% of urban population)",drop,Open defecation. Not an urbanisation measure.
+Urban population,SH.STA.SMSS.UR.ZS,"People using safely managed sanitation services, urban (% of urban population)",drop,Safely managed sanitation. Not an urbanisation measure.
+Urban population,SP.URB.GROW,Urban population growth (annual %),drop,Urban population growth rate. Retained urban share of total.
+Urban population,SP.URB.TOTL,Urban population,drop,Urban population level. Retained urban share of total.
+Urban population,SP.URB.TOTL.IN.ZS,Urban population (% of total population),keep,Urban population share. Structural control.
+Access to electricity,EG.ELC.ACCS.RU.ZS,"Access to electricity, rural (% of rural population)",drop,Rural-only access. Retained total-population access.
+Access to electricity,EG.ELC.ACCS.UR.ZS,"Access to electricity, urban (% of urban population)",drop,Urban-only access. Retained total-population access.
+Access to electricity,EG.ELC.ACCS.ZS,Access to electricity (% of population),keep,"Electricity access, total population. Infrastructure control."
+Government effectiveness,GOV_WGI_GE_EST,Government Effectiveness - Governance estimate (approx. -2.5 to +2.5),keep,"Government effectiveness, estimate scale. Institutional control."
+Government effectiveness,GOV_WGI_GE_SC,Government Effectiveness - Governance score (0-100),drop,Rescaled score (0-100). Retained estimate scale for continuity with WGI.
+Regulatory quality,GOV_WGI_RQ_EST,Regulatory Quality - Governance estimate (approx. -2.5 to +2.5),keep,"Regulatory quality, estimate scale. Institutional control."
+Regulatory quality,GOV_WGI_RQ_SC,Regulatory Quality - Governance score (0-100),drop,Rescaled score (0-100). Retained estimate scale for continuity with WGI.

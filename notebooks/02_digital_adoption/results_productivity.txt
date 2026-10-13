@@ -1,0 +1,38 @@
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:      SL.GDP.PCAP.EM.KD   R-squared:                        0.8958
+Estimator:                   PanelOLS   R-squared (Between):              0.9210
+No. Observations:                 761   R-squared (Within):               0.8849
+Date:                Tue, Oct 13 2026   R-squared (Overall):              0.9354
+Time:                        11:46:22   Log-likelihood                   -6956.2
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      703.84
+Entities:                          86   P-value                           0.0000
+Avg Obs:                       8.8488   Distribution:                   F(8,655)
+Min Obs:                       2.0000                                           
+Max Obs:                       13.000   F-statistic (robust):             177.41
+                                        P-value                           0.0000
+Time periods:                      13   Distribution:                   F(8,655)
+Avg Obs:                       58.538                                           
+Min Obs:                       36.000                                           
+Max Obs:                       75.000                                           
+                                                                                
+                                 Parameter Estimates                                 
+=====================================================================================
+                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+-------------------------------------------------------------------------------------
+IT_lag1               55.639     33.291     1.6713     0.0951     -9.7317      121.01
+NY.GDP.PCAP.PP.KD     1.5794     0.0552     28.627     0.0000      1.4711      1.6878
+SE.TER.ENRR           7.1634     51.504     0.1391     0.8894     -93.969      108.30
+NE.TRD.GNFS.ZS       -45.205     26.377    -1.7138     0.0870     -96.999      6.5886
+SP.URB.TOTL.IN.ZS     159.24     171.68     0.9275     0.3540     -177.87      496.34
+EG.ELC.ACCS.ZS        313.45     177.04     1.7706     0.0771     -34.174      661.08
+GOV_WGI_GE_EST        1669.9     3015.2     0.5538     0.5799     -4250.7      7590.5
+GOV_WGI_RQ_EST       -2325.9     2044.5    -1.1376     0.2557     -6340.5      1688.7
+=====================================================================================
+
+F-test for Poolability: 244.57
+P-value: 0.0000
+Distribution: F(97,655)
+
+Included effects: Entity, Time

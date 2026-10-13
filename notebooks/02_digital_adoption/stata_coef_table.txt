@@ -1,0 +1,31 @@
+	(1)	(2)	(3)
+	m_prod	m_lfp	m_int
+VARIABLES	slgdppcapemkd	sltlfcactfezs	sltlfcactfezs
+			
+it_lag1	55.64*	-0.0175	-0.0119
+	(31.48)	(0.0203)	(0.0262)
+gender_gap			0.0633
+			(0.218)
+it_lag1_x_gap			-0.00208
+			(0.00335)
+nygdppcapppkd	1.579***	4.03e-05	3.91e-05
+	(0.0522)	(3.02e-05)	(2.94e-05)
+seterenrr	7.163	0.0109	0.0105
+	(48.71)	(0.0180)	(0.0185)
+netrdgnfszs	-45.20*	0.0123	0.0108
+	(24.94)	(0.0132)	(0.0133)
+spurbtotlinzs	159.2	-0.101	-0.0853
+	(162.4)	(0.0939)	(0.0956)
+egelcaccszs	313.5*	-0.251	-0.242
+	(167.4)	(0.156)	(0.159)
+gov_wgi_ge_est	1,670	0.577	0.578
+	(2,851)	(0.884)	(0.854)
+gov_wgi_rq_est	-2,326	-0.630	-0.537
+	(1,934)	(1.389)	(1.394)
+Constant	-20,287	81.05***	78.94***
+	(22,900)	(17.31)	(17.25)
+			
+Observations	761	761	761
+R-squared	0.998	0.981	0.981
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

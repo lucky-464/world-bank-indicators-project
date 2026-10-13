@@ -1,0 +1,4 @@
+outcome,spec,term,stata_coef,stata_se
+SL.GDP.PCAP.EM.KD,fe,it_lag1,55.64,31.48
+SL.TLF.CACT.FE.ZS,fe,it_lag1,-0.0175,0.0203
+SL.TLF.CACT.FE.ZS,fe_interaction,it_lag1_x_gap,-0.00208,0.00335
