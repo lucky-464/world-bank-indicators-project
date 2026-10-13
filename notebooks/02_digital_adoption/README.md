@@ -1,3 +1,82 @@
+# Digital Adoption, Productivity, and Female Labour-Force Participation
+
+A cross-country panel analysis using World Bank WDI data.
+
+---
+
+## 1. Question
+
+Does digital adoption raise labour productivity and female labour-force participation across countries? And does the male-female internet gender gap weaken that effect?
+
+The CDT lists "Inclusion and Bridging Digital Divide" and "Effects of digitization on jobs, incomes, and wages" among its research themes. This project tests both claims on a panel of 86 countries from 2011 to 2024.
+
+---
+
+## 2. Findings
+
+1. **Productivity.** A positive within-country association between lagged internet adoption and productivity. Coefficient 55.6 USD per percentage point (p ≈ 0.08-0.10). Significant at the 10% level, not at 5%.
+
+2. **Female LFP.** No detectable association. Coefficient −0.0175 (p ≈ 0.41). Null.
+
+3. **Interaction.** No detectable interaction between internet adoption and the gender gap on female LFP. Coefficient −0.0021 (p ≈ 0.55). Null.
+
+**Comparison to pooled OLS.** Pooled OLS on productivity gives −57.6. Two-way fixed effects gives +55.6. The sign flips. This is the bias that country fixed effects correct. The pooled estimator was picking up an unobserved country trait that drives both internet use and productivity.
+
+---
+
+## 3. Data
+
+**Source:** World Bank World Development Indicators, pulled via the World Bank API.
+
+**Indicators:** 20 shortlisted from 1,499 WDI series. Selection procedure:
+
+- Keyword matching over indicator names and definitions, 56 candidates surfaced
+- Filtered to codes that matched the target construct, unit, and population breakdown
+- 20 kept, 36 dropped with documented reasons
+- Full log: [`shortlist_decisions.csv`](shortlist_decisions.csv)
+
+**Coverage audit:**
+
+| | Observations | Countries | Years |
+|---|---|---|---|
+| Raw long panel (all 20 indicators) | 92,105 | 217 | 1990-2025 |
+| Gender-split internet use | 1,363 / 1,362 | 137 | 2000-2025 |
+| Account ownership (Findex) | 705 / 679 | 161 / 159 | 6 survey years only |
+| Final analysis window | 761 | 86 | 2011-2024 |
+
+The binding constraint is gender-split internet use. Only ~70-90 countries report in any given year. Findex survey years are 2011, 2014, 2017, 2021, 2024.
+
+**Window choice:** 2011-2024. Widest window that keeps all controls non-missing for at least 100 countries. See `coverage_by_indicator.csv` for per-indicator counts.
+
+**Sample filter:** Countries with fewer than 3 years of complete data were dropped before lag construction. This removes 21 countries (13 with 1 year, 8 with 2 years). Rationale: countries with 1-2 observations contribute almost nothing to within-country identification.
+
+---
+
+## 4. Method
+
+**Specification:**
+
+Outcome_it = β · IT_lag1_it + γ · X_it + α_i + δ_t + ε_it
+
+
+- `Outcome`: productivity (`SL.GDP.PCAP.EM.KD`) or female LFP (`SL.TLF.CACT.FE.ZS`)
+- `IT_lag1`: internet penetration, lagged one year
+- `X`: seven controls — GDP per capita (PPP constant), tertiary enrolment, trade share, urbanisation, electricity access, government effectiveness, regulatory quality
+- `α_i`: country fixed effects
+- `δ_t`: year fixed effects
+- Errors clustered by country
+
+**Why fixed effects:**
+
+Country FE absorb all time-invariant country characteristics — geography, legal origin, colonial history, institutional structure. Year FE absorb global shocks common across countries. The coefficient on `IT_lag1` is identified from within-country deviations from a country's own internet trend.
+
+**Why lag:**
+
+Digital adoption does not affect productivity or LFP instantly. Workers learn, firms reorganise. A one-year lag allows for adjustment and partially addresses reverse causality (current productivity cannot cause last year's internet use).
+
+**Third specification:**
+
+Outcome_it = β · IT_lag1 + γ · gender_gap + λ · (IT_lag1 × gender_gap) + X_it γ + α_i + δ_t + ε_it
 
 where `gender_gap = male internet use − female internet use`.
 
