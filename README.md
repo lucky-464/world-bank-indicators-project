@@ -81,7 +81,7 @@ pip install pandas openpyxl matplotlib
 **Outputs:**
 
 - `notebooks/02_digital_adoption/panel_task2.csv` — clean analysis panel (86 countries, 761 observations)
-- `notebooks/02_digital_adoption/task3_reconciliation.csv` — coefficient comparison across Python, R, Stata
+- `notebooks/02_digital_adoption/reconciliation.csv` — coefficient comparison across Python, R, Stata
 - `notebooks/02_digital_adoption/shortlist_decisions.csv` — 56 shortlist candidates with keep/drop rationale
 
 **Key findings:**
