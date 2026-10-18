@@ -25,13 +25,16 @@ world-bank-indicators-project/
 └── PROJECT_PLAN.md # Roadmap and chapters
 ## Chapters
 
+| # | Chapter | Status |
+|---|---|---|
 | 1 | Economic Growth | Complete |
 | 2 | Digital Adoption | Complete |
-| 3 | Health | Planned |
-| 4 | Education | Planned |
-| 5 | Labor & Employment | Planned |
-| 6 | Trade & Investment | Planned |
-| 7 | Governance & Institutions | Planned |
+| 3 | India Labour Extension | Complete |
+| 4 | Health | Planned |
+| 5 | Education | Planned |
+| 6 | Labor & Employment | Planned |
+| 7 | Trade & Investment | Planned |
+| 8 | Governance & Institutions | Planned |
 
 ## Chapter 1 — Economic Growth
 
@@ -89,3 +92,29 @@ pip install pandas openpyxl matplotlib
 - **Pooled OLS vs FE.** Pooled coefficient on productivity is −57.6. FE is +55.6. Sign flips. Bias in action.
 
 **Methodology:** See [`notebooks/02_digital_adoption/README.md`](notebooks/02_digital_adoption/README.md)
+
+## Chapter 3 — India Labour Extension: Technology, Automation, and Wages
+
+**Question:** Which Indian states and occupations are most exposed to technology and automation, and does exposure relate to wage outcomes, particularly for women and lower-skilled workers?
+
+**Data:** 
+- **Labour outcomes:** PLFS unit-level microdata (2022–2024). 821,690 total person-level records.
+- **Occupation exposure:** NCO-2015 Volume II-B PDF text. Parsed and tagged using Autor, Levy, Murnane (ALM) task-based keyword dictionaries.
+- **Note:** 2025 was excluded due to a structural break (MoSPI tripled the sample size and changed the survey design).
+
+**Method:** 
+1. **Text as Data:** Extracted occupation descriptions, calculated a `Routine_Intensity` score (0 to 1) based on keyword frequency.
+2. **Econometrics:** OLS regression of log wages on Routine Intensity interacted with Gender. State and Year fixed effects, clustered by state. Heterogeneity splits for urban/rural and skill level.
+3. **Machine Learning:** XGBoost model with SHAP values to interpret non-linear wage predictors.
+
+**Outputs:**
+- `notebooks/03_india_labour/final_plfs_with_exposure.csv` — Microdata with merged exposure scores.
+- `outputs/tables/task7_results.csv` — Regression coefficients across heterogeneity splits.
+- `outputs/figures/` — SHAP summary plot, exposure vs. gender wage gap charts.
+
+**Key findings:**
+- **Gender Penalty:** Routine exposure carries a significant *additional* wage penalty for women (-0.34 log points) relative to men (p < 0.001).
+- **Skill Heterogeneity:** High-skilled women in routine jobs suffer a larger penalty (-0.40) than low-skilled women (-0.32).
+- **ML Confirmation:** SHAP values from the XGBoost model (Out-of-sample R² = 0.46) confirm that Routine Exposure and Gender are the top two predictors of wage suppression.
+
+**Methodology:** See [`notebooks/03_india_labour/README.md`](notebooks/03_india_labour/README.md)
